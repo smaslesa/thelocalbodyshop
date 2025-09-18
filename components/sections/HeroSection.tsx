@@ -96,7 +96,7 @@ export default function HeroSection() {
             </div>
 
             {/* Right Side - Logo */}
-            <div className="relative lg:flex-shrink-0 mb-12 sm:mb-8 lg:mb-0 flex justify-center lg:justify-start">
+            <div className="relative lg:flex-shrink-0 mt-16 sm:mt-12 lg:mt-0 mb-12 sm:mb-8 lg:mb-0 flex justify-center lg:justify-start">
               <motion.img
                 src="/logos/the-local-body-shop-logo.png"
                 alt="The Local Body Shop"
