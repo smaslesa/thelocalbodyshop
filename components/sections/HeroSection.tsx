@@ -37,24 +37,13 @@ export default function HeroSection() {
             <div className="space-y-4 sm:space-y-6 lg:space-y-8 lg:max-w-2xl mt-4 sm:mt-6 lg:mt-0">
               {/* Main headline - Clean and Simple */}
               <div>
-                <h1 className="text-white leading-[0.95]">
-                  <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-light uppercase"
-                    style={{ 
-                      fontFamily: '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-                      letterSpacing: '0.02em',
-                      textShadow: '0 2px 20px rgba(0,0,0,0.5)'
-                    }}>
-                    COLLISION REPAIR
-                  </span>
-                  <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extralight italic mt-2"
-                    style={{ 
-                      fontFamily: '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-                      letterSpacing: '0.03em',
-                      opacity: 0.95,
-                      textShadow: '0 2px 15px rgba(0,0,0,0.4)'
-                    }}>
-                    Perfected
-                  </span>
+                <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-light uppercase leading-[0.95]"
+                  style={{ 
+                    fontFamily: '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                    letterSpacing: '0.02em',
+                    textShadow: '0 2px 20px rgba(0,0,0,0.5)'
+                  }}>
+                  COLLISION REPAIR
                 </h1>
               </div>
 
@@ -102,12 +91,12 @@ export default function HeroSection() {
                 alt="The Local Body Shop"
                 loading="eager"
                 decoding="sync"
-                className="h-40 sm:h-48 md:h-56 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10"
+                className="h-56 sm:h-64 md:h-72 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10"
                 style={{
                   filter: 'invert(1) brightness(0.95) drop-shadow(0 4px 20px rgba(0,0,0,0.5))',
                   WebkitFilter: 'invert(1) brightness(0.95) drop-shadow(0 4px 20px rgba(0,0,0,0.5))',
                   maxWidth: '90vw',
-                  minHeight: '160px'
+                  minHeight: '200px'
                 }}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
