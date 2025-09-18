@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- This is a placeholder - we'll replace with the actual logo -->
+  <rect width="800" height="600" fill="white"/>
+  <text x="400" y="300" text-anchor="middle" font-family="serif" font-size="48" fill="black">THE LOCAL BODY SHOP</text>
+  <text x="400" y="350" text-anchor="middle" font-family="serif" font-size="24" fill="black">EST. 2021</text>
+  <text x="400" y="400" text-anchor="middle" font-family="serif" font-size="18" fill="black">COEUR D'ALENE, ID</text>
+</svg>

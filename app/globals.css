@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Simple smooth scrolling without libraries */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent scroll issues */
+body {
+  overflow-x: hidden;
+}
