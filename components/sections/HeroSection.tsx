@@ -7,7 +7,7 @@ export default function HeroSection() {
   const containerRef = useRef<HTMLElement>(null)
 
   return (
-    <section ref={containerRef} className="relative min-h-[100vh] min-h-[100dvh] bg-black overflow-hidden">
+    <section ref={containerRef} className="relative h-screen min-h-[100vh] min-h-[100dvh] bg-black overflow-hidden">
       {/* Premium Background Image */}
       <motion.div 
         className="absolute inset-0 w-full h-full"
@@ -29,7 +29,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Content Container */}
-      <div className="relative z-10 min-h-[100vh] min-h-[100dvh] flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 py-20 sm:py-24 lg:py-0">
+      <div className="relative z-10 h-full min-h-[100vh] min-h-[100dvh] flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 py-safe pt-20 pb-24 sm:py-24 lg:py-0">
         <div className="max-w-[1600px] mx-auto w-full">
           {/* Hero Content - Split Layout */}
           <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between lg:gap-20 xl:gap-32">
