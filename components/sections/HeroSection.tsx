@@ -91,12 +91,12 @@ export default function HeroSection() {
                 alt="The Local Body Shop"
                 loading="eager"
                 decoding="sync"
-                className="h-56 sm:h-64 md:h-72 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10"
+                className="h-64 sm:h-72 md:h-80 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10"
                 style={{
                   filter: 'invert(1) brightness(0.95) drop-shadow(0 4px 20px rgba(0,0,0,0.5))',
                   WebkitFilter: 'invert(1) brightness(0.95) drop-shadow(0 4px 20px rgba(0,0,0,0.5))',
                   maxWidth: '90vw',
-                  minHeight: '200px'
+                  minHeight: '256px'
                 }}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
