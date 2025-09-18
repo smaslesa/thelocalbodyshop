@@ -4,5 +4,8 @@
       "main": true
     }
   },
-  "alias": ["thelocalbodyshop.vercel.app"]
+  "alias": ["thelocalbodyshop.vercel.app"],
+  "github": {
+    "autoAlias": true
+  }
 }

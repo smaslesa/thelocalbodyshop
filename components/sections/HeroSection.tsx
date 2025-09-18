@@ -88,9 +88,9 @@ export default function HeroSection() {
                 decoding="sync"
                 className="h-56 sm:h-64 md:h-72 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10"
                 style={{
-                  filter: 'invert(1) drop-shadow(0 0 8px rgba(255,255,255,1)) drop-shadow(0 0 25px rgba(255,255,255,1)) drop-shadow(0 0 50px rgba(255,255,255,1)) drop-shadow(0 0 100px rgba(100,200,255,1)) drop-shadow(0 0 150px rgba(0,150,255,0.8))',
-                  WebkitFilter: 'invert(1) drop-shadow(0 0 8px rgba(255,255,255,1)) drop-shadow(0 0 25px rgba(255,255,255,1)) drop-shadow(0 0 50px rgba(255,255,255,1)) drop-shadow(0 0 100px rgba(100,200,255,1)) drop-shadow(0 0 150px rgba(0,150,255,0.8))',
-                  opacity: 1,
+                  filter: 'invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.3))',
+                  WebkitFilter: 'invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.3))',
+                  opacity: 0.95,
                   maxWidth: '90vw',
                   minHeight: '200px'
                 }}
