@@ -82,7 +82,7 @@ export default function ProcessSection() {
           <div className="flex flex-wrap justify-center gap-8 mb-8">
             <span className="text-sm uppercase tracking-wider text-gray-500">Free Estimates</span>
             <span className="text-gray-300">•</span>
-            <span className="text-sm uppercase tracking-wider text-gray-500">Lifetime Warranty</span>
+            <span className="text-sm uppercase tracking-wider text-gray-500">Warranty</span>
             <span className="text-gray-300">•</span>
             <span className="text-sm uppercase tracking-wider text-gray-500">All Insurance</span>
           </div>

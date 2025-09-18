@@ -146,7 +146,7 @@ export default function CommitmentAndProcess() {
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-xs uppercase tracking-[0.15em] text-gray-500 font-semibold">
               <span>Free Estimates</span>
               <span className="text-gray-300">•</span>
-              <span>Lifetime Warranty</span>
+              <span>Warranty</span>
               <span className="text-gray-300">•</span>
               <span>All Insurance</span>
             </div>
