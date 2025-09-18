@@ -38,16 +38,7 @@ export default function HeroSection() {
             {/* Left Side Desktop / Bottom Mobile - Text Content */}
             <div className="space-y-8 lg:max-w-2xl mt-8 lg:mt-0">
               {/* Main headline - Collision Repair Focused */}
-              <motion.h1
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ 
-                  duration: 0.6,
-                  delay: 0.2,
-                  ease: [0.25, 0.46, 0.45, 0.94]
-                }}
-                className="text-white"
-              >
+              <h1 className="text-white">
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight leading-[0.85]">
                   COLLISION
                 </span>
@@ -57,71 +48,63 @@ export default function HeroSection() {
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[0.85]">
                   PERFECTED
                 </span>
-              </motion.h1>
+              </h1>
 
-              {/* Subtext - Detailed Description */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ 
-                  duration: 0.5,
-                  delay: 0.4,
-                  ease: "easeOut"
-                }}
-                className="text-white/90 text-base md:text-lg max-w-2xl font-light leading-relaxed"
-              >
-                Locally owned and operated collision repair facility that focuses on quality over quantity. Our goal is to bring your vehicle back to pre-accident condition while following OEM repair procedures to ensure your vehicle is as safe as the day it came off the assembly line.
-              </motion.p>
+              {/* Subtext - Mobile Optimized */}
+              <p className="text-white/90 text-sm md:text-base lg:text-lg max-w-xl lg:max-w-2xl font-light leading-relaxed">
+                <span className="block md:hidden">
+                  Locally owned collision repair. Quality over quantity. OEM procedures for your safety.
+                </span>
+                <span className="hidden md:block">
+                  Locally owned and operated collision repair facility that focuses on quality over quantity. Our goal is to bring your vehicle back to pre-accident condition while following OEM repair procedures to ensure your vehicle is as safe as the day it came off the assembly line.
+                </span>
+              </p>
 
-              {/* CTAs - Cleaner and Tighter */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ 
-                  duration: 0.5,
-                  delay: 0.5,
-                  ease: "easeOut"
-                }}
-                className="flex flex-col sm:flex-row gap-4 pt-6"
-              >
+              {/* CTAs - Mobile Optimized */}
+              <div className="flex flex-col sm:flex-row gap-3 pt-4 pb-6">
                 <a
                   href="/estimate"
-                  className="bg-white text-black px-8 py-4 text-sm font-semibold uppercase tracking-wider hover:bg-gray-100 transition-colors duration-200"
+                  className="bg-white text-black px-6 py-3 md:px-8 md:py-4 text-sm font-semibold uppercase tracking-wider hover:bg-gray-100 transition-colors duration-200 text-center"
                 >
-                  Get Free Estimate
+                  Free Estimate
                 </a>
                 
                 <a
                   href="tel:2088182259"
-                  className="bg-transparent text-white border border-white/50 px-8 py-4 text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-200"
+                  className="bg-transparent text-white border-2 border-white/70 px-6 py-3 md:px-8 md:py-4 text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-200 text-center"
                 >
-                  (208) 818-2259
+                  Call Now
                 </a>
-              </motion.div>
+              </div>
             </div>
 
-            {/* Right Side Desktop / Top Mobile - CRAZY ILLUMINATED Logo */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ 
-                duration: 0.7,
-                delay: 0.3,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}
-              className="relative lg:flex-shrink-0"
-            >
+            {/* Right Side Desktop / Top Mobile - Logo */}
+            <div className="relative lg:flex-shrink-0 mb-6 lg:mb-0">
               {/* The BLACK logo with PERMANENT BRIGHT GLOW - COMPLETELY STATIC */}
               <img
                 src="/logos/the-local-body-shop-logo.png"
                 alt="The Local Body Shop"
-                className="h-64 sm:h-72 md:h-80 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10 mx-auto lg:mx-0"
+                loading="eager"
+                decoding="async"
+                className="h-48 sm:h-56 md:h-64 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10 mx-auto lg:mx-0"
                 style={{
                   filter: 'brightness(0) drop-shadow(0 0 5px rgba(255,255,255,1)) drop-shadow(0 0 20px rgba(255,255,255,1)) drop-shadow(0 0 40px rgba(255,255,255,1)) drop-shadow(0 0 80px rgba(100,200,255,1)) drop-shadow(0 0 120px rgba(0,150,255,0.8))',
                   opacity: 1
                 }}
+                onError={(e) => {
+                  console.error('Logo failed to load:', e);
+                  // Fallback to text if image fails
+                  (e.target as HTMLImageElement).style.display = 'none';
+                }}
               />
-            </motion.div>
+              {/* Fallback text logo */}
+              <div 
+                className="hidden text-white text-center font-bold text-2xl md:text-3xl lg:text-4xl"
+                id="logo-fallback"
+              >
+                THE LOCAL<br/>BODY SHOP
+              </div>
+            </div>
           </div>
 
           {/* Bottom accent - Trust indicators */}
