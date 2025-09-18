@@ -212,7 +212,7 @@ export default function Navigation() {
                           src="/logos/the-local-body-shop-logo.png"
                           alt="The Local Body Shop"
                           className={`w-auto object-contain transition-all duration-700 ${
-                            isScrolled ? 'h-[72px]' : 'h-[63px]'  // 13% bigger for mobile too
+                            isScrolled ? 'h-[80px]' : 'h-[72px]'  // Bigger logo on mobile without changing nav height
                           }`}
                           style={{
                             filter: isScrolled ? 'brightness(0)' : 'invert(1)'
@@ -222,7 +222,7 @@ export default function Navigation() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-                {!showLogo && <div className="h-[63px] w-32" />}
+                {!showLogo && <div className="h-[72px] w-32" />}
               </div>
 
               {/* Mobile Actions */}
