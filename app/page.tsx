@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
 import HeroSection from '@/components/sections/HeroSection'
 import TrustBar from '@/components/sections/TrustBar'
-import ProcessSection from '@/components/sections/ProcessSection'
 import GallerySection from '@/components/sections/GallerySection'
 import TestimonialsSection from '@/components/sections/TestimonialsSection'
+import EditorialAboutSection from '@/components/sections/EditorialAboutSection'
 import CTASection from '@/components/sections/CTASection'
 
 export const metadata: Metadata = {
@@ -30,9 +30,9 @@ export default function Home() {
     <>
       <HeroSection />
       <TrustBar />
-      <ProcessSection />
       <GallerySection />
       <TestimonialsSection />
+      <EditorialAboutSection />
       <CTASection />
     </>
   )

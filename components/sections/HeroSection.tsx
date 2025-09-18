@@ -8,7 +8,7 @@ export default function HeroSection() {
 
   return (
     <section ref={containerRef} className="relative min-h-screen bg-black overflow-hidden">
-      {/* Premium Background Image - No Parallax for smooth scrolling */}
+      {/* Premium Background Image */}
       <motion.div 
         className="absolute inset-0 w-full h-full"
         initial={{ opacity: 0 }}
@@ -28,75 +28,92 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
       </motion.div>
 
-      {/* Premium Content - No Parallax */}
-      <div 
-        className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32"
-      >
+      {/* Content Container */}
+      <div className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
         <div className="max-w-[1600px] mx-auto w-full">
-          {/* Hero Content - Split Layout with Logo on Right (Desktop) / Top (Mobile) */}
+          {/* Hero Content - Split Layout */}
           <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between lg:gap-20 xl:gap-32">
-            {/* Left Side Desktop / Bottom Mobile - Text Content */}
+            {/* Left Side - Minimal Text Content */}
             <div className="space-y-8 lg:max-w-2xl mt-8 lg:mt-0">
-              {/* Main headline - Collision Repair Focused */}
-              <h1 className="text-white font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.8] tracking-[0.05em] uppercase drop-shadow-2xl" style={{ 
-                fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                textShadow: '0 0 20px rgba(255,255,255,0.3), 0 0 40px rgba(255,255,255,0.1)',
-                letterSpacing: '0.08em'
-              }}>
-                COLLISION<br />
-                REPAIR
-              </h1>
+              {/* Main headline - Clean and Simple */}
+              <div>
+                <h1 className="text-white leading-[0.95]">
+                  <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-light uppercase"
+                    style={{ 
+                      fontFamily: '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                      letterSpacing: '0.02em',
+                      textShadow: '0 2px 20px rgba(0,0,0,0.5)'
+                    }}>
+                    COLLISION REPAIR
+                  </span>
+                  <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extralight italic mt-2"
+                    style={{ 
+                      fontFamily: '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                      letterSpacing: '0.03em',
+                      opacity: 0.95,
+                      textShadow: '0 2px 15px rgba(0,0,0,0.4)'
+                    }}>
+                    Perfected
+                  </span>
+                </h1>
+              </div>
 
-              {/* Subtext - Mobile Optimized */}
-              <p className="text-white/90 text-sm md:text-base lg:text-lg max-w-xl lg:max-w-2xl font-medium leading-relaxed tracking-wide" style={{ fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif' }}>
-                <span className="block md:hidden">
-                  Locally owned collision repair. Quality over quantity. OEM procedures for your safety.
-                </span>
-                <span className="hidden md:block">
-                  Locally owned and operated collision repair facility that focuses on quality over quantity. Our goal is to bring your vehicle back to pre-accident condition while following OEM repair procedures to ensure your vehicle is as safe as the day it came off the assembly line.
-                </span>
+              {/* Single line description */}
+              <p className="text-white/85 text-base md:text-lg lg:text-xl font-light"
+                style={{ 
+                  fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                  textShadow: '0 1px 8px rgba(0,0,0,0.6)'
+                }}>
+                Locally owned. OEM repair procedures. Quality over quantity.
               </p>
 
-              {/* CTAs - Mobile Optimized */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-4 pb-6">
-                <a
+              {/* CTAs - Clean and Simple */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <motion.a
                   href="/estimate"
-                  className="bg-white text-black px-6 py-3 md:px-8 md:py-4 text-sm font-bold uppercase tracking-[0.1em] hover:bg-gray-100 transition-colors duration-200 text-center shadow-lg"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif' }}
+                  className="bg-white text-black px-8 py-4 text-sm font-semibold uppercase tracking-[0.08em] hover:bg-gray-100 transition-all duration-300 text-center shadow-xl hover:shadow-2xl"
+                  style={{ 
+                    fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                  }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  Free Estimate
-                </a>
+                  Get Free Estimate
+                </motion.a>
                 
-                <a
+                <motion.a
                   href="tel:2088182259"
-                  className="bg-transparent text-white border-2 border-white/70 px-6 py-3 md:px-8 md:py-4 text-sm font-bold uppercase tracking-[0.1em] hover:bg-white hover:text-black transition-all duration-200 text-center shadow-lg"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif' }}
+                  className="bg-transparent text-white border-2 border-white/80 px-8 py-4 text-sm font-semibold uppercase tracking-[0.08em] hover:bg-white hover:text-black transition-all duration-300 text-center shadow-xl hover:shadow-2xl backdrop-blur-sm"
+                  style={{ 
+                    fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                  }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  Call Now
-                </a>
+                  (208) 818-2259
+                </motion.a>
               </div>
             </div>
 
-            {/* Right Side Desktop / Top Mobile - Logo */}
+            {/* Right Side - Logo */}
             <div className="relative lg:flex-shrink-0 mb-8 lg:mb-0 flex justify-center lg:justify-start">
-              {/* The ACTUAL LOGO IMAGE - Works on ALL devices */}
-              <img
+              <motion.img
                 src="/logos/the-local-body-shop-logo.png"
                 alt="The Local Body Shop"
                 loading="eager"
                 decoding="sync"
                 className="h-56 sm:h-64 md:h-72 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10"
                 style={{
-                  filter: 'invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.3))',
-                  WebkitFilter: 'invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.3))',
-                  opacity: 0.95,
+                  filter: 'invert(1) brightness(0.95) drop-shadow(0 4px 20px rgba(0,0,0,0.5))',
+                  WebkitFilter: 'invert(1) brightness(0.95) drop-shadow(0 4px 20px rgba(0,0,0,0.5))',
                   maxWidth: '90vw',
                   minHeight: '200px'
                 }}
-                onLoad={() => console.log('✅ Logo loaded successfully!')}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
                 onError={(e) => {
-                  console.error('❌ Logo failed to load');
-                  // Try alternative source
+                  console.error('Logo failed to load, trying alternative path');
                   (e.target as HTMLImageElement).src = '/images/logo/the-local-body-shop-logo.png';
                 }}
               />
@@ -105,6 +122,22 @@ export default function HeroSection() {
 
         </div>
       </div>
+
+      {/* Minimal scroll indicator */}
+      <motion.div 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/40"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.5 }}
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="text-2xl font-thin"
+        >
+          ↓
+        </motion.div>
+      </motion.div>
     </section>
   )
 }
