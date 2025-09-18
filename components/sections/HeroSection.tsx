@@ -38,13 +38,9 @@ export default function HeroSection() {
             {/* Left Side Desktop / Bottom Mobile - Text Content */}
             <div className="space-y-8 lg:max-w-2xl mt-8 lg:mt-0">
               {/* Main headline - Collision Repair Focused */}
-              <h1 className="text-white">
-                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight leading-[0.85]">
-                  COLLISION
-                </span>
-                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[0.85]">
-                  REPAIR
-                </span>
+              <h1 className="text-white font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-tight tracking-tight">
+                COLLISION<br />
+                REPAIR
               </h1>
 
               {/* Subtext - Mobile Optimized */}
@@ -101,32 +97,6 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Bottom accent - Trust indicators */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="absolute bottom-12 left-6 md:left-12 lg:left-20 right-6 md:right-12 lg:right-20"
-          >
-            <div className="flex flex-wrap items-center justify-between gap-4 text-white/40 text-xs uppercase tracking-[0.2em]">
-              <div className="flex items-center gap-6">
-                <span>Est. 2021</span>
-                <span className="hidden sm:inline">•</span>
-                <span className="hidden sm:inline">I-CAR Gold Class</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="hidden md:inline text-white/20">Scroll to explore</span>
-                <motion.div
-                  animate={{ y: [0, 5, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  <svg className="w-4 h-4 text-white/40" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                  </svg>
-                </motion.div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
