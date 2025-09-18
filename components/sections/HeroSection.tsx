@@ -29,12 +29,12 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Content Container */}
-      <div className="relative z-10 h-full min-h-[100vh] min-h-[100dvh] flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 py-safe pt-20 pb-24 sm:py-24 lg:py-0">
+      <div className="relative z-10 h-full min-h-[100vh] min-h-[100dvh] flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 pt-24 pb-20 sm:pt-28 sm:pb-24 lg:py-0">
         <div className="max-w-[1600px] mx-auto w-full">
           {/* Hero Content - Split Layout */}
           <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between lg:gap-20 xl:gap-32">
             {/* Left Side - Minimal Text Content */}
-            <div className="space-y-8 lg:max-w-2xl mt-8 lg:mt-0">
+            <div className="space-y-6 sm:space-y-8 lg:max-w-2xl mt-6 sm:mt-8 lg:mt-0">
               {/* Main headline - Clean and Simple */}
               <div>
                 <h1 className="text-white leading-[0.95]">
@@ -96,7 +96,7 @@ export default function HeroSection() {
             </div>
 
             {/* Right Side - Logo */}
-            <div className="relative lg:flex-shrink-0 mt-16 sm:mt-12 lg:mt-0 mb-12 sm:mb-8 lg:mb-0 flex justify-center lg:justify-start">
+            <div className="relative lg:flex-shrink-0 mt-12 sm:mt-8 lg:mt-0 mb-8 sm:mb-6 lg:mb-0 flex justify-center lg:justify-start">
               <motion.img
                 src="/logos/the-local-body-shop-logo.png"
                 alt="The Local Body Shop"
