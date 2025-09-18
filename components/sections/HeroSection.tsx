@@ -1,29 +1,10 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef, useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { useRef } from 'react'
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLElement>(null)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  
-  // Simplified - removed parallax for now to fix scrolling
-  // const { scrollYProgress } = useScroll({
-  //   target: containerRef,
-  //   offset: ["start start", "end start"]
-  // })
-  
-  // const imageY = useTransform(scrollYProgress, [0, 1], [0, 150])
-  // const textY = useTransform(scrollYProgress, [0, 1], [0, -100])
-
-  // Track mouse for interactive glow
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
 
   return (
     <section ref={containerRef} className="relative min-h-screen bg-black overflow-hidden">
