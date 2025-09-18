@@ -7,7 +7,7 @@ export default function HeroSection() {
   const containerRef = useRef<HTMLElement>(null)
 
   return (
-    <section ref={containerRef} className="relative h-screen min-h-[100vh] min-h-[100dvh] bg-black overflow-hidden">
+    <section ref={containerRef} className="relative min-h-screen bg-black overflow-hidden">
       {/* Premium Background Image */}
       <motion.div 
         className="absolute inset-0 w-full h-full"
@@ -29,12 +29,12 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Content Container */}
-      <div className="relative z-10 h-full min-h-[100vh] min-h-[100dvh] flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 pt-24 pb-20 sm:pt-28 sm:pb-24 lg:py-0">
-        <div className="max-w-[1600px] mx-auto w-full">
+      <div className="relative z-10 min-h-screen flex items-center px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
+        <div className="max-w-[1600px] mx-auto w-full py-20 sm:py-16 lg:py-0">
           {/* Hero Content - Split Layout */}
           <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between lg:gap-20 xl:gap-32">
             {/* Left Side - Minimal Text Content */}
-            <div className="space-y-6 sm:space-y-8 lg:max-w-2xl mt-6 sm:mt-8 lg:mt-0">
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8 lg:max-w-2xl mt-4 sm:mt-6 lg:mt-0">
               {/* Main headline - Clean and Simple */}
               <div>
                 <h1 className="text-white leading-[0.95]">
@@ -68,7 +68,7 @@ export default function HeroSection() {
               </p>
 
               {/* CTAs - Clean and Simple */}
-              <div className="flex flex-col sm:flex-row gap-4 pb-safe">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <motion.a
                   href="/estimate"
                   className="bg-white text-black px-8 py-4 text-sm font-semibold uppercase tracking-[0.08em] hover:bg-gray-100 transition-all duration-300 text-center shadow-xl hover:shadow-2xl"
@@ -96,7 +96,7 @@ export default function HeroSection() {
             </div>
 
             {/* Right Side - Logo */}
-            <div className="relative lg:flex-shrink-0 mt-12 sm:mt-8 lg:mt-0 mb-8 sm:mb-6 lg:mb-0 flex justify-center lg:justify-start">
+            <div className="relative lg:flex-shrink-0 mt-20 sm:mt-16 lg:mt-0 mb-8 lg:mb-0 flex justify-center lg:justify-start">
               <motion.img
                 src="/logos/the-local-body-shop-logo.png"
                 alt="The Local Body Shop"
