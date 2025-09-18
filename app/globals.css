@@ -34,3 +34,17 @@ html {
 body {
   overflow-x: hidden;
 }
+
+/* Mobile viewport height fix and safe area support */
+@supports (padding: max(0px)) {
+  .pb-safe {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* Ensure proper viewport height on mobile */
+@supports (height: 100dvh) {
+  .min-h-\[100dvh\] {
+    min-height: 100dvh;
+  }
+}

@@ -7,7 +7,7 @@ export default function HeroSection() {
   const containerRef = useRef<HTMLElement>(null)
 
   return (
-    <section ref={containerRef} className="relative min-h-screen bg-black overflow-hidden">
+    <section ref={containerRef} className="relative min-h-[100vh] min-h-[100dvh] bg-black overflow-hidden">
       {/* Premium Background Image */}
       <motion.div 
         className="absolute inset-0 w-full h-full"
@@ -29,7 +29,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Content Container */}
-      <div className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
+      <div className="relative z-10 min-h-[100vh] min-h-[100dvh] flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 py-20 sm:py-24 lg:py-0">
         <div className="max-w-[1600px] mx-auto w-full">
           {/* Hero Content - Split Layout */}
           <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between lg:gap-20 xl:gap-32">
@@ -68,7 +68,7 @@ export default function HeroSection() {
               </p>
 
               {/* CTAs - Clean and Simple */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 pb-safe">
                 <motion.a
                   href="/estimate"
                   className="bg-white text-black px-8 py-4 text-sm font-semibold uppercase tracking-[0.08em] hover:bg-gray-100 transition-all duration-300 text-center shadow-xl hover:shadow-2xl"
@@ -96,7 +96,7 @@ export default function HeroSection() {
             </div>
 
             {/* Right Side - Logo */}
-            <div className="relative lg:flex-shrink-0 mb-8 lg:mb-0 flex justify-center lg:justify-start">
+            <div className="relative lg:flex-shrink-0 mb-12 sm:mb-8 lg:mb-0 flex justify-center lg:justify-start">
               <motion.img
                 src="/logos/the-local-body-shop-logo.png"
                 alt="The Local Body Shop"
