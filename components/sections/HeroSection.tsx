@@ -30,7 +30,7 @@ export default function HeroSection() {
 
       {/* Content Container */}
       <div className="relative z-10 min-h-screen flex items-center px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
-        <div className="max-w-[1600px] mx-auto w-full py-20 sm:py-16 lg:py-0">
+        <div className="max-w-[1600px] mx-auto w-full py-12 sm:py-8 lg:py-0">
           {/* Hero Content - Split Layout */}
           <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between lg:gap-20 xl:gap-32">
             {/* Left Side - Minimal Text Content */}
@@ -96,18 +96,18 @@ export default function HeroSection() {
             </div>
 
             {/* Right Side - Logo */}
-            <div className="relative lg:flex-shrink-0 mt-20 sm:mt-16 lg:mt-0 mb-8 lg:mb-0 flex justify-center lg:justify-start">
+            <div className="relative lg:flex-shrink-0 mt-8 sm:mt-6 lg:mt-0 mb-4 lg:mb-0 flex justify-center lg:justify-start">
               <motion.img
                 src="/logos/the-local-body-shop-logo.png"
                 alt="The Local Body Shop"
                 loading="eager"
                 decoding="sync"
-                className="h-56 sm:h-64 md:h-72 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10"
+                className="h-40 sm:h-48 md:h-56 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10"
                 style={{
                   filter: 'invert(1) brightness(0.95) drop-shadow(0 4px 20px rgba(0,0,0,0.5))',
                   WebkitFilter: 'invert(1) brightness(0.95) drop-shadow(0 4px 20px rgba(0,0,0,0.5))',
                   maxWidth: '90vw',
-                  minHeight: '200px'
+                  minHeight: '160px'
                 }}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
