@@ -83,7 +83,7 @@ export default function HeroSection() {
                 
                 <motion.a
                   href="tel:2088182259"
-                  className="bg-transparent text-white border-2 border-white/80 px-8 py-4 text-sm font-semibold uppercase tracking-[0.08em] hover:bg-white hover:text-black transition-all duration-300 text-center shadow-xl hover:shadow-2xl backdrop-blur-sm"
+                  className="bg-white text-black px-8 py-4 text-sm font-semibold uppercase tracking-[0.08em] hover:bg-gray-100 transition-all duration-300 text-center shadow-xl hover:shadow-2xl"
                   style={{ 
                     fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
                   }}
