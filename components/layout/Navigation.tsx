@@ -314,7 +314,7 @@ export default function Navigation() {
                 <img
                   src="/logos/the-local-body-shop-logo.png"
                   alt="The Local Body Shop"
-                  className="h-10 w-auto object-contain"
+                  className="h-16 w-auto object-contain"
                   style={{ filter: 'brightness(0)' }}
                 />
                 <button
