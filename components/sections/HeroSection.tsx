@@ -79,30 +79,42 @@ export default function HeroSection() {
             </div>
 
             {/* Right Side Desktop / Top Mobile - Logo */}
-            <div className="relative lg:flex-shrink-0 mb-6 lg:mb-0">
+            <div className="relative lg:flex-shrink-0 mb-8 lg:mb-0 flex justify-center lg:justify-start">
               {/* The BLACK logo with PERMANENT BRIGHT GLOW - COMPLETELY STATIC */}
               <img
                 src="/logos/the-local-body-shop-logo.png"
                 alt="The Local Body Shop"
                 loading="eager"
                 decoding="async"
-                className="h-48 sm:h-56 md:h-64 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10 mx-auto lg:mx-0"
+                className="h-56 sm:h-64 md:h-72 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10"
                 style={{
-                  filter: 'brightness(0) drop-shadow(0 0 5px rgba(255,255,255,1)) drop-shadow(0 0 20px rgba(255,255,255,1)) drop-shadow(0 0 40px rgba(255,255,255,1)) drop-shadow(0 0 80px rgba(100,200,255,1)) drop-shadow(0 0 120px rgba(0,150,255,0.8))',
-                  opacity: 1
+                  filter: 'brightness(0) drop-shadow(0 0 8px rgba(255,255,255,1)) drop-shadow(0 0 25px rgba(255,255,255,1)) drop-shadow(0 0 50px rgba(255,255,255,1)) drop-shadow(0 0 100px rgba(100,200,255,1)) drop-shadow(0 0 150px rgba(0,150,255,0.8))',
+                  opacity: 1,
+                  maxWidth: '90vw'
+                }}
+                onLoad={() => {
+                  console.log('Logo loaded successfully');
                 }}
                 onError={(e) => {
-                  console.error('Logo failed to load:', e);
-                  // Fallback to text if image fails
+                  console.error('Logo failed to load, showing fallback');
+                  const fallback = document.getElementById('logo-fallback');
+                  if (fallback) {
+                    fallback.classList.remove('hidden');
+                    fallback.classList.add('block');
+                  }
                   (e.target as HTMLImageElement).style.display = 'none';
                 }}
               />
-              {/* Fallback text logo */}
+              {/* Fallback text logo - More visible */}
               <div 
-                className="hidden text-white text-center font-bold text-2xl md:text-3xl lg:text-4xl"
+                className="hidden text-white text-center font-bold text-3xl md:text-4xl lg:text-5xl"
                 id="logo-fallback"
+                style={{
+                  textShadow: '0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.6), 0 0 30px rgba(100,200,255,0.8)'
+                }}
               >
-                THE LOCAL<br/>BODY SHOP
+                THE LOCAL<br/>BODY SHOP<br/>
+                <span className="text-lg">EST. 2021</span>
               </div>
             </div>
           </div>
