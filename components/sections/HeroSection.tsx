@@ -42,11 +42,8 @@ export default function HeroSection() {
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight leading-[0.85]">
                   COLLISION
                 </span>
-                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight leading-[0.85]">
-                  REPAIR
-                </span>
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[0.85]">
-                  PERFECTED
+                  REPAIR
                 </span>
               </h1>
 
