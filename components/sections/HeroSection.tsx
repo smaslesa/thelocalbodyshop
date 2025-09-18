@@ -80,24 +80,24 @@ export default function HeroSection() {
 
             {/* Right Side Desktop / Top Mobile - Logo */}
             <div className="relative lg:flex-shrink-0 mb-8 lg:mb-0 flex justify-center lg:justify-start">
-              {/* Always show fallback on mobile, image on desktop */}
-              <div className="block md:hidden text-white text-center font-bold text-3xl" style={{
-                textShadow: '0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.6), 0 0 30px rgba(100,200,255,0.8)'
-              }}>
-                THE LOCAL<br/>BODY SHOP<br/>
-                <span className="text-lg">EST. 2021</span>
-              </div>
-              
-              {/* Desktop logo */}
+              {/* The ACTUAL LOGO IMAGE - Works on ALL devices */}
               <img
                 src="/logos/the-local-body-shop-logo.png"
                 alt="The Local Body Shop"
                 loading="eager"
-                decoding="async"
-                className="hidden md:block h-72 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10"
+                decoding="sync"
+                className="h-56 sm:h-64 md:h-72 lg:h-[340px] xl:h-[425px] 2xl:h-[510px] w-auto relative z-10"
                 style={{
                   filter: 'brightness(0) drop-shadow(0 0 8px rgba(255,255,255,1)) drop-shadow(0 0 25px rgba(255,255,255,1)) drop-shadow(0 0 50px rgba(255,255,255,1)) drop-shadow(0 0 100px rgba(100,200,255,1)) drop-shadow(0 0 150px rgba(0,150,255,0.8))',
-                  opacity: 1
+                  opacity: 1,
+                  maxWidth: '90vw',
+                  minHeight: '200px'
+                }}
+                onLoad={() => console.log('✅ Logo loaded successfully!')}
+                onError={(e) => {
+                  console.error('❌ Logo failed to load');
+                  // Try alternative source
+                  (e.target as HTMLImageElement).src = '/images/logo/the-local-body-shop-logo.png';
                 }}
               />
             </div>
