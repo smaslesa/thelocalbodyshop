@@ -38,13 +38,17 @@ export default function HeroSection() {
             {/* Left Side Desktop / Bottom Mobile - Text Content */}
             <div className="space-y-8 lg:max-w-2xl mt-8 lg:mt-0">
               {/* Main headline - Collision Repair Focused */}
-              <h1 className="text-white font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-tight tracking-tight">
+              <h1 className="text-white font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.8] tracking-[0.05em] uppercase drop-shadow-2xl" style={{ 
+                fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                textShadow: '0 0 20px rgba(255,255,255,0.3), 0 0 40px rgba(255,255,255,0.1)',
+                letterSpacing: '0.08em'
+              }}>
                 COLLISION<br />
                 REPAIR
               </h1>
 
               {/* Subtext - Mobile Optimized */}
-              <p className="text-white/90 text-sm md:text-base lg:text-lg max-w-xl lg:max-w-2xl font-light leading-relaxed">
+              <p className="text-white/90 text-sm md:text-base lg:text-lg max-w-xl lg:max-w-2xl font-medium leading-relaxed tracking-wide" style={{ fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif' }}>
                 <span className="block md:hidden">
                   Locally owned collision repair. Quality over quantity. OEM procedures for your safety.
                 </span>
@@ -57,14 +61,16 @@ export default function HeroSection() {
               <div className="flex flex-col sm:flex-row gap-3 pt-4 pb-6">
                 <a
                   href="/estimate"
-                  className="bg-white text-black px-6 py-3 md:px-8 md:py-4 text-sm font-semibold uppercase tracking-wider hover:bg-gray-100 transition-colors duration-200 text-center"
+                  className="bg-white text-black px-6 py-3 md:px-8 md:py-4 text-sm font-bold uppercase tracking-[0.1em] hover:bg-gray-100 transition-colors duration-200 text-center shadow-lg"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif' }}
                 >
                   Free Estimate
                 </a>
                 
                 <a
                   href="tel:2088182259"
-                  className="bg-transparent text-white border-2 border-white/70 px-6 py-3 md:px-8 md:py-4 text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-200 text-center"
+                  className="bg-transparent text-white border-2 border-white/70 px-6 py-3 md:px-8 md:py-4 text-sm font-bold uppercase tracking-[0.1em] hover:bg-white hover:text-black transition-all duration-200 text-center shadow-lg"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif' }}
                 >
                   Call Now
                 </a>
